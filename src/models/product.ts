@@ -16,6 +16,21 @@ const Product = db.define(
     stock: {
       type: DataTypes.NUMBER,
     },
+    type: {
+      type: DataTypes.STRING,
+    },
+    obs: {
+      type: DataTypes.TEXT,
+    },
+    postOn:{
+      type: DataTypes.JSON,
+    },
+    hide:{
+      type:DataTypes.NUMBER,
+    },
+    dueDate:{
+      type:DataTypes.DATE,
+    }
   },
   {
     createdAt: false,

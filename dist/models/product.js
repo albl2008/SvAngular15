@@ -18,6 +18,21 @@ const Product = connection_1.default.define("product", {
     stock: {
         type: sequelize_1.DataTypes.NUMBER,
     },
+    type: {
+        type: sequelize_1.DataTypes.STRING,
+    },
+    obs: {
+        type: sequelize_1.DataTypes.TEXT,
+    },
+    postOn: {
+        type: sequelize_1.DataTypes.JSON,
+    },
+    hide: {
+        type: sequelize_1.DataTypes.NUMBER,
+    },
+    dueDate: {
+        type: sequelize_1.DataTypes.DATE,
+    }
 }, {
     createdAt: false,
     updatedAt: false,
