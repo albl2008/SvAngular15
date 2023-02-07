@@ -1,4 +1,6 @@
-import { Router } from "express";
+import { Router } from 'express'
+import {validateProduct} from '../validators'
+import {validateId} from '../validators'
 import {
   getProducts,
   getProduct,
@@ -9,9 +11,11 @@ import {
 
 const router = Router();
 
+
 router.get("/", getProducts);
-router.get("/:id", getProduct);
-router.delete("/:id", deleteProduct);
-router.post("/", postProduct);
-router.put("/:id", updateProduct);
+router.get("/:id", validateId, getProduct);
+router.delete("/:id",validateId, deleteProduct);
+router.post("/",validateProduct, postProduct);
+router.put("/:id",validateId, updateProduct);
+
 export default router;
